@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img width="200px" srcset="/html/image/rabbit_500.png 3x,
+    /html/image/rabbit_300.png 2x" src="/html/image/rabbit_150.png" alt="test"> -->
+    
+    <!-- <img srcset="/html/image/rabbit_500.png 500w, 
+    /html/image/rabbi_300.png 300w, /html/image/rabbi_150.png 150w" alt="rabbit"
+    sizes="(min-width:960px) 500px, (max-width: 640px) 300px, 900px"> -->
+
+    <picture>
+        <source srcset="/html/image/rabbit_500.png" media="
+        (min-width: 960px)">
+        <source srcset="/html/image/rabbit_500.png" media="
+        (min-width: 640px)">
+        <img src="/html/image/rabbit_150.png" alt="rabbit">
+    </picture>
+</body>
+</html>
