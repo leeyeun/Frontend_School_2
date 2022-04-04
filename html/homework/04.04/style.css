@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+body, ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background-color: #F0EBF8;
+    
+}
+.wrapper{
+    width: 750px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+}
+.section{
+    border: 1px solid rgb(216, 213, 213);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    margin: 20px 0;
+}
+.section h2{
+    padding: 10px 0;
+    margin-bottom: 20px;
+    
+}
+.header{
+    border: 1px solid rgb(216, 213, 213);
+    border-top: 10px solid #673BB7;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: white;
+    margin: 20px 0;
+}
+.header-h1{
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding: 20px 20px 0 20px;
+}
+.header-p-1{
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+}
+.header-p-2{
+    padding-top: 20px;
+    padding: 20px;
+}
+.section li{
+    padding: 10px 0;
+}
+.input_text{
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+.input_text_long{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+.question_select{
+    padding: 15px;
+    width: 150px;
+    border-color: rgb(216, 213, 213);
+    border-radius: 5px;
+}
+.section_date{
+    border: none;
+    border-bottom: 1px solid rgb(216, 213, 213);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.section_time{
+    border: none;
+    border-bottom: 1px solid rgb(216, 213, 213);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.section_label{
+    color: rgb(119, 118, 118);
+    font-size: 14px;
+    display: block;
+    padding: 10px 0;
+    
+}
+.submit_btn{
+    background-color: #673BB7;
+    color: white;
+    border: none;
+    width: 90px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.delete_btn{
+    border: none;
+    color: #673BB7;
+    background-color: transparent;
+    float: right;
+}
