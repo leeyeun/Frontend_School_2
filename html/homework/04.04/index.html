@@ -15,13 +15,13 @@
             <p class="header-p-1">가고 싶은 회사에 대한 호감도를 조사합니다. 아이고 의미 없다,,,</p>
             <p class="header-p-2">dpdms10421@gmail.com</p>
         </header>
-        <section>
+        <form method="get">
             <section class="section radio">
-                <form action="" method="get">
+                <fieldset>
                     <h2>다음 문자 중에 왠지 마음에 드는 것을 하나 고르세요</h2>
                     <ul>
                         <li>
-                            <input type="radio" name="radio" id="naver" required>
+                            <input type="radio" name="radio" id="naver">
                             <label for="naver" >네</label>
                         </li>
                         <li>
@@ -41,11 +41,11 @@
                             <label for="basecamp">베</label>
                         </li>
                     </ul>
-                </form>
+                </fieldset>
             </section>
             <section class="section check">
                 <h2>친구과 문자를 합니다. 다음 중 어떤 메신저를 이용하시겠습니까? 모두 골라주세요</h2>
-                <form action="">
+                <fieldset>
                     <ul>
                         <li>
                             <input type="checkbox" name="check" id="kakao_check">
@@ -68,42 +68,42 @@
                             <label for="buddy">버디버디</label>
                         </li>
                     </ul>  
-                </form>
+                </fieldset>
             </section>
             <section class="section text">
                 <h2>면접에서 자신의 포부를 한 문장으로 얘기한다면?</h2>
-                <input class="input_text" type="text" name="" id=""placeholder="내 답변">
+                <input class="input_text" type="text" placeholder="내 답변">
             </section>
             <section class="section textarea">
                 <h2>당신은 지금 한 기업의 최종 면접을 앞두고 있습니다. 면접장에 들어가기 직전, 자기 자신에게 해주고 싶은 말은?</h2>
-                <input class="input_text_long" type="text" name="" id=""placeholder="내답변"></input>
+                <input class="input_text_long" type="text" placeholder="내답변">
             </section>
             <section class="section select">
                 <h2>다음 중 기술 면접때 듣고 싶은 질문이 아닌 것은?</h2>
-                <form action="">
+                <fieldset>
                     <select name="question" id="question" class="question_select" required>
-                        <option value="">선택</option>
+                        <option value="0" selected disabled>선택</option>
                         <option value="1">코딩 테스트</option>
                         <option value="2">javascript</option>
                         <option value="3">react</option>
                     </select>
-                </form>
+                </fieldset>
             </section>
             <section class="section date">
                 <h2>취업을 희망하는 날짜를 선택해주세요.</h2>
                 <label for="date" class="section_label">날짜</label>
-                <input type="date" name="date" id="date" class="section_date">
+                <input type="date" name="date" id="date" class="section_date" required>
             </section>
             <section class="section time">
                 <h2>업무를 시작 하기에 가장 적당한 시간을 고르세요</h2>
                 <label for="time" class="section_label">시간</label>
-                <input type="time" name="time" id="time" class="section_time">
+                <input type="time" name="time" id="time" class="section_time" required>
             </section>
             <footer class="footer">
                 <button type="submit" class="submit_btn">제출</button>
-                <button type="submit" class="delete_btn">양식 지우기</button>
+                <button type="reset" class="delete_btn">양식 지우기</button>
             </footer>
-        </section>
+        </form>
     </section>
 </body>
 </html>

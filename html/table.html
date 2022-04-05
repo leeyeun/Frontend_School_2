@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Page Title</title>
+        <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- <table>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>이름</th>
+                <th>판매량</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>해리포터</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>헝거게임</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>반지의제왕</td>
+                <td>300</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">총 판매량</td>
+                <td>600</td>
+            </tr>
+        </tfoot>
+        </table> -->
+        <!-- <table>
+            <caption> 이달의 책 판매량 </caption>
+        <tr>
+            <th>구분</th>
+            <th>이름</th>
+            <th>판매량</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>해리포터</td>
+            <td>100</td>
+        </tr>
+    </table> -->
+        <table>
+            <caption> 이달의 책 판매량 </caption>
+            <tr>
+                <th>구분</th>
+                <th colspan="2">이름</th> <!-- 가로 병합-->
+                <th>판매량</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>해리포터</td>
+                <td rowspan="2">100</td><!-- 세로 병합-->
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>해리포터2</td>
+                <td>100</td>
+            </tr>
+        </table> 
+    </body>
+</html>
