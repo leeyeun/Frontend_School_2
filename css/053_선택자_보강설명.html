@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title></title>
+    <style>
+        li + li{
+            color: red;
+        } 
+        /* ul 아래 있는 모든 p태긍에 해당 */
+        ul p{
+            font-size: 22px;
+        }
+        /* 자식의p태그만 */
+        li > p {
+            background-color: blue;
+        }
+
+        li.one{
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <p>hello world</p>
+    <ul>
+        <li>
+            <p>hello world</p>
+        </li>
+        <li>
+            <div>
+                <div>
+                    <div>
+                        <p>hello world</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li class="one">hello world</li>
+        <li class="one">hello world</li>
+    </ul>
+</body>
+</html>
