@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>float</title>
+    <title>가상 요소 선택자</title>
     <style>
-        div{
-            background-color: blue;
-        }
-        .one{
-            float: left;
-            background-color: green;
+        p::after{
+            content: ' cm';
         }
     </style>
 </head>
 <body>
-    <div class="one">first</div>
-    <div>second</div>
+    <p>10</p>
 </body>
 </html>

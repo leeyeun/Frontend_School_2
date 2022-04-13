@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>속성선택자2</title>
+    <style>
+        p[class="paullab"]{
+            font-size: 48px;
+        }
+        /* 단어에paul 포함되는거 */
+        p[class~="paul"]{
+            text-align: center;
+        }
+        /* 문자열에 paul 포함된 모든 것 */
+        p[class*="paul"]{
+            color: red;
+        }
+        /* korea로 시작하는거 */
+        /* 순서 상관 있음! */
+        p[class^="korea"]{
+            color: blue;
+        }
+        p[class$="lab"]{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <p class="paul">hello world</p>
+    <p class="paul test">hello world</p>
+    <p class="paultest">hello world</p>
+    <p class="paullab">hello world</p>
+    <p class="koreapaullab">hello world</p>
+    <p class="paullab koreaone">hello world</p>
+    <p class="world">hello world</p>
+</body>
+</html>
