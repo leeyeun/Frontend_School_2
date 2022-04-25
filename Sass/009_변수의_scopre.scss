@@ -1,0 +1,9 @@
+.one{
+    $value : red;
+    color: $value;
+}
+$value : red;
+
+.two{
+    color: $value;
+}

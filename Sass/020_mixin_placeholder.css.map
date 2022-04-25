@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AANA,IAMI,CANK;EACL,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,GAAG;CACxB;;AAED,AAAA,IAAI,CAAC;EAED,MAAM,EAAE,eAAe;CAC1B",
+    "sources": [
+        "020_mixin_placeholder.scss"
+    ],
+    "names": [],
+    "file": "020_mixin_placeholder.css"
+}

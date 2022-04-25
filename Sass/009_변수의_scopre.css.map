@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EAEA,KAAK,EADI,GAAG;CAEf;;AAGD,AAAA,IAAI,CAAA;EACA,KAAK,EAHA,GAAG;CAIX",
+    "sources": [
+        "009_변수의_scopre.scss"
+    ],
+    "names": [],
+    "file": "009_변수의_scopre.css"
+}
