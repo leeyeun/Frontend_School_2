@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,EAAE,CAAC;EACC,SAAS,EAPK,IAAI;EAQlB,WAAW,EAP2B,GAAG;CAQ5C",
+    "sources": [
+        "032.scss"
+    ],
+    "names": [],
+    "file": "032.css"
+}
