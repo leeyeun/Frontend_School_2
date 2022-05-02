@@ -4,31 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello javascript</title>
+    <title></title>
 </head>
 <body>
     <script>
-       //숫자형 (Number)
-        var num = 10;
+        let txt = 'ABCDEFGHIJKLMNABC';
+        let text_two = "mom said \'hello world\'";
+        let number = '100';
 
-        document.write(num, '<br>');  // 10
-        document.write(num/3, '<br>');  // 3.3333..
-        document.write(parseInt(num/3), '<br>');  // 3
+        document.write(number + number, '<br>');
+        document.write(Number(number) + Number(number), '<br>');
+        document.write(parseInt(number) + parseInt(number), '<br>');
+        
+        document.write(+number+ +number, '<br>');
+        document.write(`txt : ${txt}`, '<br>');
+        document.write(`${number} + ${number} = ${number * 2}`,
+        '<br>');
+        document.write(`txt.length : ${txt.length} <br>`);
+        document.write(`txt[1] : ${txt[1]}<br>`);
 
-        /* 숫자형의 사칙연산 */
-        document.write("더하기 : ", 2 + 2.5, '<br>');  // 4.5
-        document.write("빼기 : ", 5 - 7, '<br>');  // -2
-        document.write("곱하기 : ", 3 * 2, '<br>');  // 6
-        document.write("나누기 : ", 2/2, '<br>'); // 1
+        document.write(txt.indexOf("F"), '<br>');
+        document.write(`txt.indexOf("F") : ${txt.indexOf("F")}<br>`);
+        document.write(`txt.search("F") : ${txt.search("F")}<br>`);
 
-        /*특수 숫자 값*/
-        document.write("무한대 : ", 1/0,'<br>'); // Infinity
-        document.write( "숫자가 아님" / 2, '<br>'); 
-        // NaN, 문자열을 숫자로 나누면 오류가 발생합니다.
+        document.write(`txt.indexOf("FG") : ${txt.indexOf("FG")}<br>`);
+        document.write(`txt.search("FG") : ${txt.search("FG")}<br>`);
+        document.write(`txt.indexOf("Z") : ${txt.indexOf("Z")}<br>`);
+        document.write(`txt.search("Z") : ${txt.search("Z")}<br>`);
 
-        document.write(0.1 + 0.2 == 0.3, '<br>');
-        document.write(9999999999999999999, '<br>');
+        let regExp = /BCD/;
+        // document.write(`txt.indexOf(regExp) : ${txt.indexOf(regExp)}<br>`);
+        document.write(`txt.search(regExp) : ${txt.search(regExp)}<br>`);
+        document.write(`txt.lastIndexOf : ${txt.lastIndexOf("F")}<br>`)
+        document.write(`txt.lastIndexOf : ${txt.lastIndexOf("FGH")}<br>`);
+        document.write(`txt.lastIndexOf : ${txt.lastIndexOf("B")}<br>`);
+        document.write(`txt.indexOf : ${txt.indexOf("B")}<br>`);
+        document.write(txt[0] +txt[1]+txt[2], '<br>');
+        document.write(txt[0], txt[1], txt[2], '<br>');
 
-        // Big.js, BigNumber.js, Decimal.js, Math.js 등으로 해결할 수 있습니다.
+
+        document.write(`txt.slice(0, 3) : ${txt.slice(0, 3)} <br>`);
+        document.write(`txt.substring(0, 3) : ${txt.substring(0, 3)} <br>`);
+        document.write(`txt.substr(0, 3) : ${txt.substr(0, 3)} <br>`);
+        document.write('abcdef'.replace('cde', 'hojun'));
+        document.write(`txt.replace('ABC', 'hojun') : ${txt.replace("ABC", 'hojun')}<br>`);
+        document.write(`txt.replace('ABC', 'hojun') : ${txt.replace(/ABC/g, 'hojun')}<br>`);
+
+        document.write('')
+
+        
+
+        // document.write(number + number,'<br>');
+        // document.write(number + 10,'<br>');
+        // document.write(number - 10,'<br>');
+        // document.write(number * 10,'<br>');
+
+        // document.write(typeof(number),'<br>');
+        // document.write(typeof(+number),'<br>');
+        // document.write(typeof(null),'<br>');
+        // document.write(typeof(NaN),'<br>');
+        // document.write(typeof(Infinity),'<br>');
+        // document.write(typeof([]),'<br>');
+        // document.write(typeof({}),'<br>');
+        // document.write(typeof(''),'<br>');
+        // document.write(typeof(0),'<br>');
+        // // document.write(,'<br>');
+
+        // console.log(0 + '');
+        // console.log(Infinity + '');
+        // console.log(true + '');
     </script>
 </body>
+</html>
