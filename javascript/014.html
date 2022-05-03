@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var fish = ['정어리', '고등어', '돌고래', '참치', '고래상어', '코끼리'];
+        // 1. splice 를 이용해 코끼리를 제거해보세요
+        // 2. 참치 다음에 다금바리를 추가해보세요
+        // 3. 돌고래를 제거하고 옥돔과 갈치를 추가해보세요
+
+        // fish.splice(5,1);
+        // console.log(fish);
+        // fish.splice(4,0,'다금바리');
+        // console.log(fish);
+        // fish.splice(2, 1, '옥돔','갈치');
+        // console.log(fish);
+
+        // var fish = ['정어리', '고등어', '돌고래', '참치', '고래상어', '코끼리'];
+        // 다음 배열에서 물고기가 아닌것을 slice로 선택해 콘솔로 출력해 보세요.
+        // var one = fish.slice(2,3);
+        // var two = fish.slice(5,6);
+        // fish.slice(5);
+        // fish.slice(-1);
+
+        // console.log(one);
+        // console.log(two);
+
+        arrNum = [3, 9, 10, 13, 21, 44]
+        arrNum.sort(
+            function (a, b){
+                return a-b;
+            }
+        );
+
+        arrNum.sort(
+            function (a, b){
+                if(a<b) {
+                    return -1;
+                }else if(a>b){
+                    return 1;
+                }else {
+                    return 0;
+                }
+            }
+        );
+        // var arrNum2 = [13, 9, 10, 2];
+        // 오름차순으로 정렬할 경우 (a - b)
+        // 13 - 9 == 4 --> 양수임으로 9를 앞으로
+        // 13 - 10 == 3 --> 양수임으로 10을 앞으로
+        // 9 - 10 == -1 --> 음수 임으로 9를 앞으로 [9, 10, 13, 2]
+        // 13 - 2 == 11 --> 양수임으로 2를 앞으로 [9, 10, 2, 13]
+        // 10 - 2 == 8 --> 양수임으로 2를 앞으로 [9, 2, 10, 13]
+        // 9 - 2 == 7 --> 양수임으로 2를 앞으로 [2, 9, 10, 13]
+
+        arrNum.sort(
+            function (a, b){
+                return b-a;
+            }
+        );
+
+    </script>
+</body>
+</html>
