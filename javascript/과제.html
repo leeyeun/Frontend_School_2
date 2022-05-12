@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .canvas {
+            width: 400px; 
+            height: 400px; 
+            border: 1px solid black;
+        }
+        .canvas.red{
+            background-color: red;
+        }
+        .canvas.yellow{
+            background-color: yellow;
+        }
+        .canvas.blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas"></div>
+    <button class="btn1">빨강</button>
+    <button class="btn2">노랑</button>
+    <button class="btn3">파랑</button>
+    <script>
+        const btnRed = document.querySelector('.btn1');
+        const btnYellow = document.querySelector('.btn2');
+        const btnBule = document.querySelector('.btn3');
+        const box = document.querySelector('.canvas');
+
+        // btnRed.addEventListener('click', function(){
+        //     box.classList.remove('yellow','blue');
+        //     box.classList.add('red');
+            
+        // })
+        // btnYellow.addEventListener('click', function(){
+        //     box.classList.remove('red','blue');
+        //     box.classList.add('yellow');
+            
+        // })
+        // btnBule.addEventListener('click', function(){
+        //     box.classList.remove('red','yellow');
+        //     box.classList.add('blue');
+            
+        // })
+
+        const btnArr = [btnRed, btnYellow, btnBule];
+
+        btnArr.forEach((element) => {
+            element.addEventListener('click', () => {
+                box.classList.remove('red', 'blue', 'yellow');
+                if(element.className == 'btn1'){
+                    box.classList.add('red');
+                }
+                else if(element.className == 'btn2'){
+                    box.classList.add('yellow');
+                }
+                else{
+                    box.classList.add('blue');
+                }
+            })
+        })
+    </script>
+</body>
+</html>
