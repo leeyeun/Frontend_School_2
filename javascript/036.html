@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Factory() { }
+        // const item = new Factory();
+
+        // function NewFactory(name) {
+        //     this.name = name;
+        //     this.sayYourName = function () {
+        //         console.log(`제 이름은 ${this.name}`);
+        //     }
+        // }
+        // const robot1 = new NewFactory('재현');
+        const foods = ['짜장면', '치킨', '파스타','라면'];
+        function FoodBot(foodNames) {
+            this.menu = foodNames;
+            this.sayMenu = function() {
+                ;
+                // console.log(Math.random()*foods.length)
+                console.log(this.menu[Math.floor(Math.random() * this.menu.length)]);
+            }
+        }
+        const foodBootMart1 = new FoodBot(foods);
+        //foodBootMart1.sayName();
+    </script>
+</body>
+</html>

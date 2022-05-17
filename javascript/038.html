@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Parent() {
+            this.name = "재현";
+        }
+
+        Parent.prototype.rename = function(name) {
+            this.name = name;
+        }
+        Parent.prototype.sayName = function() {
+            console.log(this.name);
+        }
+
+        function Child() {
+            Parent.call(this);
+        }
+
+        Child.prototype = Object.create(Parent.prototype);
+        // const child = new Child();
+        // => undefined
+        // child.name
+        // => '재현'
+        // child.sayName()
+        //  => 038.html:19 재현
+        // => undefined
+        // child.rename('영웅님')
+        // => undefined
+        // child.name
+        // => '영웅님'
+        Child.prototype.canWalk = function() {
+            console.log('걷는다!');
+        }
+        // const child2 = new Child();
+        //  -> undefined
+        // child2.sayName();
+        //  -> 038.html:19 재현
+        //  -> undefined
+        // child2.rename('대표님');
+        //  -> undefined
+        // child2.canWalk();
+        //  -> 038.html:39 걷는다!
+        //  -> undefined
+    </script>
+</body>
+</html>

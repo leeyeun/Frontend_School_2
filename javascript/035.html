@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const yeun = {
+            name : "이예은",
+            address: "부산 남구 용호로 231번길 62",
+            phoneNum : "010-6256-2664",
+            sleep : function (bed) {
+                bed.timeUp();
+            }
+        }
+        const bed = {
+            time : 0,
+            timeUp : function(){
+                this.time++;
+                console.log(`${this.time}시간 동안 누워있기!!!`);
+            },
+            
+        }
+    </script>
+</body>
+</html>

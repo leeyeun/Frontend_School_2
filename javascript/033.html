@@ -13,18 +13,21 @@
     </style>
 </head>
 <body>
-    <!-- <div class="wrapper"></div> -->
+    <form action="">
+        <button type="submit" class="submit">제출</button>
+    </form>
+    
     <script>
-        // const wrapper = document.querySelector('.wrapper');
-
-        // wrapper.addEventListener('contextmenu', (event) => {
-        //     event.preventDefault();
-        //     alert('해당 페이지에서는 오른쪽 클릭을 제한합니다.');
-        // })
-        document.addEventListener('contextmenu', (event) => {
+        const submit = document.querySelector('.submit');
+        submit.addEventListener('click', (event) => {
+            console.log('clicked');
             event.preventDefault();
-            alert('해당 페이지에서는 오른쪽 클릭을 제한합니다.');
-        })
+                // event.stopPropagation();
+        });
+        
+        document.body.addEventListener('click', () => {
+            console.log('event still alive!');
+        });
     </script>
 </body>
 </html>
