@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+</head>
+<body>
+    <h1>To Do</h1>
+    <input type="text" placeholder="To Do를 작성하세요">
+    <button class="btn">입력</button>
+    <div class="area">
+        <ul class="list-ul"></ul>
+    </div>
+    <script>
+        const text = document.querySelector('input'); 
+        const area = document.querySelector('.area');
+        const btn = document.querySelector('.btn');
+        const list = document.querySelector('.list-ul');
+        const todos = [];
+
+        // area.appendChild()="<h3>오늘의 todo</h3>";
+        btn.addEventListener('click', submitText)
+        const alldeletebtn = document.createElement('button');
+            area.appendChild(alldeletebtn);
+            alldeletebtn.innerText = "전체 삭제"
+        
+        function submitText() {
+            todos.push(text.value);
+            const li = document.createElement('li');
+            list.appendChild(li);
+            li.innerHTML =`${text.value}`;
+            text.value = '';
+            text.focus();
+
+            const deletebtn = document.createElement('button');
+            li.append(deletebtn);
+            deletebtn.innerText = 'x';
+            if(text.value !== '') {
+                text.value = '';
+                text.focus();
+            }else {
+                alert('내용을 입력하세요');
+                text.focus();
+            }
+            
+        }
+    </script>
+</body>
+</html>

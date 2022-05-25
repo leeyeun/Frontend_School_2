@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위니브 스토어</title>
+    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="src/style/style.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        const root = document.querySelector('#root');
+
+        async function getProductData() {
+            const respose = await fetch('http://test.api.weniv.co.kr/mall')
+            const product = await respose.json()
+            return product
+        }
+
+        getProductData().then(product => {
+            const mainElement = document.createElement("main");
+            mainElement.classList.add('product');
+            // console.log(mainElement);
+
+            const prodctPageHeader = document.createElement("h1");
+            prodctPageHeader.setAttribute("class", "ir")
+            prodctPageHeader.innerText = "상품목록 페이지";
+            mainElement.appendChild(prodctPageHeader);
+
+            const productList = document.createElement("ul");
+            productList.setAttribute("class", "product-list");
+            mainElement.appendChild(productList);
+
+            product.forEach((item) => {
+                // const productDetailLink = document.createElement('a');
+                // productDetailLink.href = `/detail/${item.id}`;
+                
+                const productItem = document.createElement('li');
+                const productCard = document.createElement("a");
+
+                productCard.setAttribute("href", `/detail/${item.id}`);
+                productCard.setAttribute("class", "product-item");
+
+                const productImageContainer = document.createElement("div");
+                productImageContainer.setAttribute("class", "product-img");
+                //이미지 태그 만들기
+                const productImage = document.createElement("img");
+                productImage.setAttribute("src", `http://test.api.weniv.co.kr/${item.thumbnailImg}`);
+                productImage.setAttribute("alt","상품이미지");
+                productImageContainer.appendChild(productImage);
+
+                //strong태그 - 이름
+                const productName = document.createElement("strong");
+                productName.setAttribute("class", "product-name");
+                productName.innerText = item.productName;
+
+                //가격
+                const productPriceContainer = document.createElement("div");
+                productPriceContainer.setAttribute("class", "product-price");
+                const productPrice = document.createElement("strong");
+
+                productCard.appendChild(productImageContainer);
+                productCard.appendChild(productName);
+                productItem.appendChild(productCard);
+                productList.appendChild(productItem);
+            });
+
+            root.append(mainElement)
+        })
+    </script>
+</body>
+</html>
