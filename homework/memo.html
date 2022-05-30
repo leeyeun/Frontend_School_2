@@ -23,21 +23,26 @@
         // area.appendChild()="<h3>오늘의 todo</h3>";
         btn.addEventListener('click', submitText)
         const alldeletebtn = document.createElement('button');
-            area.appendChild(alldeletebtn);
-            alldeletebtn.innerText = "전체 삭제"
+        area.appendChild(alldeletebtn);
+        alldeletebtn.innerText = "전체 삭제"
+        alldeletebtn.addEventListener("click", alldelete)
+        
+        
         
         function submitText() {
             todos.push(text.value);
             const li = document.createElement('li');
             list.appendChild(li);
             li.innerHTML =`${text.value}`;
-            text.value = '';
-            text.focus();
+            // text.value = '';
+            // text.focus();
 
             const deletebtn = document.createElement('button');
             li.append(deletebtn);
             deletebtn.innerText = 'x';
+            console.log(text.value);
             if(text.value !== '') {
+                saveText(todos);
                 text.value = '';
                 text.focus();
             }else {
@@ -45,6 +50,17 @@
                 text.focus();
             }
             
+        }
+
+        function saveText(todos) {
+            
+            console.log(todos);
+            localStorage.setItem(todos);
+        }
+
+        function alldelete() {
+            list.innerHTML = '';
+            // location.reload();
         }
     </script>
 </body>
