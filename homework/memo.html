@@ -14,11 +14,12 @@
         <ul class="list-ul"></ul>
     </div>
     <script>
-        const text = document.querySelector('input'); 
+        const todo = document.querySelector('input'); 
         const area = document.querySelector('.area');
         const btn = document.querySelector('.btn');
         const list = document.querySelector('.list-ul');
         const todos = [];
+        const TODOS_LS = 'todos'
 
         // area.appendChild()="<h3>오늘의 todo</h3>";
         btn.addEventListener('click', submitText)
@@ -27,40 +28,48 @@
         alldeletebtn.innerText = "전체 삭제"
         alldeletebtn.addEventListener("click", alldelete)
         
-        
-        
-        function submitText() {
-            todos.push(text.value);
+        function inputText(text) {
             const li = document.createElement('li');
             list.appendChild(li);
-            li.innerHTML =`${text.value}`;
-            // text.value = '';
-            // text.focus();
+            li.innerText = text;
+            const newId = todos.length + 1;
+            li.id = newId;
 
             const deletebtn = document.createElement('button');
             li.append(deletebtn);
             deletebtn.innerText = 'x';
-            console.log(text.value);
-            if(text.value !== '') {
-                saveText(todos);
-                text.value = '';
-                text.focus();
+
+            const toDoObj = {
+                text: text,
+                id: newId
+            }
+            todos.push(toDoObj);
+            saveText();
+        }
+        
+        function submitText(event) {
+            event.preventDefault();
+            var newTodo = todo.value;
+            console.log(todo.value);
+            if(newTodo !== '') {
+                inputText(newTodo);
+                todo.value = '';
+                todo.focus();
             }else {
                 alert('내용을 입력하세요');
-                text.focus();
+                todo.focus();
             }
             
         }
 
-        function saveText(todos) {
-            
-            console.log(todos);
-            localStorage.setItem(todos);
+        function saveText() {
+            localStorage.setItem(TODOS_LS, JSON.stringify(todos));
         }
 
         function alldelete() {
             list.innerHTML = '';
             // location.reload();
+            localStorage.clear();
         }
     </script>
 </body>
