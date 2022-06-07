@@ -1,3 +1,9 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* { 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
 body {
     /* width: 1280px;
     height: 720px; */
@@ -30,16 +36,17 @@ body {
     font-weight: 700;
     font-size: 24px;
     padding-top: 48px;
-    padding-bottom: 23px;
+    /* padding-bottom: 23px; */
 
 }
 
 .section-timer .timer-title:after {
-    display: inline;
+    display: block;
     content: "";
     width: 312px;
-    height: 10px;
-    background-color: white;
+    height: 1px;
+    color: white;
+    
     padding-top: 23px;
 }
 
@@ -64,14 +71,31 @@ body {
     justify-content: center;
 }
 
+.timer-btn{
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%);
+    border: 1px solid #354971;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48.01px;
+}
+
 .timer-time li:not(:last-child)::after{
     content: ":";
     display: inline-block;
     color: #8198D0;
     font-size: 60px;
     margin: 0 8px 0 8px;
-    vertical-align: 23px;
 }
+
+/* .timer-time li::before{
+    content: "00";
+    display: inline;
+    color: #FFFFFF;
+} */
 
 .section-timer .timer-button{
     display: flex;
@@ -80,4 +104,10 @@ body {
 }
 .timer-button li:nth-child(1) {
     padding-right: 12px;
+}
+
+.copy{
+    margin-top: 60px;
+    margin-bottom: 103px;
+    color: #8596BF;
 }
