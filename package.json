@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "gsap": "^3.10.4",
+    "styled-components": "^5.3.5",
+    "styled-reset": "^4.4.1",
     "three": "^0.141.0"
   }
 }
