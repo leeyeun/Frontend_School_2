@@ -25,7 +25,7 @@ export default function Signup() {
     };
 
     return (
-        <form className={styles.login_form} onSubmit={handleSubmit}>
+        <form className={styles.signup_form} onSubmit={handleSubmit}>
             <fieldset>
                 <legend>회원가입</legend>
                 <label htmlFor="myEmail">email : </label>
